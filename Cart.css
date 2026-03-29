@@ -1,0 +1,156 @@
+/* Cart Page Specific Styles */
+        .cart-page-wrapper {
+            padding: 60px 5%;
+            background-color: #fdfaf5;
+            min-height: 70vh;
+        }
+
+        .cart-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .cart-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #1e3932;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .cart-table th, .cart-table td {
+            padding: 15px 10px;
+            text-align: left;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .cart-table th {
+            color: #888;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .cart-table td {
+            color: #1a1a1a;
+            vertical-align: middle;
+        }
+
+        .item-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #006241;
+        }
+
+        .qty-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-qty {
+            background: #f1f0f0;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-qty:hover {
+            background: #006241;
+            color: white;
+        }
+
+        .btn-remove {
+            color: #e74c3c;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: 0.2s;
+        }
+
+        .btn-remove:hover {
+            color: #c0392b;
+            transform: scale(1.1);
+        }
+
+        .cart-summary {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 15px;
+        }
+
+        .grand-total {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e3932;
+        }
+
+        .cart-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-continue, .btn-checkout-page {
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-continue {
+            background: #f1f0f0;
+            color: #1a1a1a;
+            border: 1px solid #ccc;
+        }
+
+        .btn-continue:hover {
+            background: #e2e2e2;
+        }
+
+        .btn-checkout-page {
+            background: #006241;
+            color: white;
+            border: none;
+        }
+
+        .btn-checkout-page:hover {
+            background: #004d33;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 50px 0;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .cart-table thead { display: none; }
+            .cart-table, .cart-table tbody, .cart-table tr, .cart-table td { display: block; width: 100%; }
+            .cart-table tr { margin-bottom: 20px; border: 1px solid #eee; padding: 15px; border-radius: 8px; }
+            .cart-table td { text-align: right; padding-left: 50%; position: relative; border: none; }
+            .cart-table td::before { content: attr(data-label); position: absolute; left: 15px; width: 45%; text-align: left; font-weight: 600; color: #888; }
+            .cart-summary { align-items: center; }
+            .cart-actions { flex-direction: column; width: 100%; }
+            .btn-continue, .btn-checkout-page { width: 100%; text-align: center; }
+        }

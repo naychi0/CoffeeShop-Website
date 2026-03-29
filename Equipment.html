@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Boutique - Coffee Selection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:wght@400;500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Equipment.css">
+</head>
+<body>
+
+    <div class="hero-section">
+        <header class="navbar">
+            <div class="logo">Bean Boutique</div>
+            <nav class="nav-links">
+                <a href="Home.html">Home</a>
+                <a href="Coffee.html">Coffee</a>
+                <a href="Equipment.html">Equipment</a>             
+                <a href="Event.html">Events</a>
+                <a href="Offer.html">Offers</a>
+                 <a href="Card.html" id="navCartLink" onclick="window.location.href='Card.html'">
+                    <i class="fa-solid fa-cart-shopping"></i> Cart
+                </a>
+
+            </nav>
+        </header> 
+    </div>
+
+    <section class="menu-section">
+        
+
+        <div class="menu-header">
+            
+            <p>Explore all flavours of coffee with us. There is always a new cup worth experiencing</p>
+        </div>
+
+       <div class="menu-grid">
+            <div class="coffee-card">
+                <img src="image/Equipment1.jpg" alt="Professional Espresso Machine" class="card-image">
+                <div class="card-content">
+                    <h3>Pro Espresso Machine</h3>
+                    <p class="description">High-performance machine with a commercial-grade steam wand for café-quality espresso and latte art at home.</p>
+                    <div class="usage-tips">
+                        <strong><i class="fa-solid fa-lightbulb" style="color: #ffcc00;"></i> Tip:</strong> Purge the steam wand before and after texturing milk to keep it clean.
+                    </div>
+                    <div class="card-action">
+                        <span class="price">$450.00</span>
+                        <button class="btn-instant-cart" data-name="Pro Espresso Machine" data-price="450.00">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <img src="image/Equipment2.jpg" alt="Electric Burr Grinder" class="card-image">
+                <div class="card-content">
+                    <h3>Electric Burr Grinder</h3>
+                    <p class="description">Precision conical burr grinder featuring 40 grind settings. Ensures consistent coffee grounds for optimal extraction.</p>
+                    <div class="usage-tips">
+                        <strong><i class="fa-solid fa-lightbulb" style="color: #ffcc00;"></i> Tip:</strong> Adjust to a finer grind for espresso and a coarser grind for French press.
+                    </div>
+                    <div class="card-action">
+                        <span class="price">$120.00</span>
+                        <button class="btn-instant-cart" data-name="Electric Burr Grinder" data-price="120.00">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <img src="image/Equipment3.jpg" alt="Compact Espresso Maker" class="card-image">
+                <div class="card-content">
+                    <h3>Compact Espresso Maker</h3>
+                    <p class="description">A space-saving, sleek espresso maker that delivers a rich, full-bodied shot with a perfect crema layer every time.</p>
+                    <div class="usage-tips">
+                        <strong><i class="fa-solid fa-lightbulb" style="color: #ffcc00;"></i> Tip:</strong> Pre-heat your glass cups with hot water before pulling a shot.
+                    </div>
+                    <div class="card-action">
+                        <span class="price">$199.00</span>
+                        <button class="btn-instant-cart" data-name="Compact Espresso Maker" data-price="199.00">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <img src="image/Equipment4.jpg" alt="Super-Automatic Machine" class="card-image">
+                <div class="card-content">
+                    <h3>Super-Auto Machine</h3>
+                    <p class="description">Bean-to-cup convenience. This smart machine automatically grinds, tamps, and brews your favorite coffee with one touch.</p>
+                    <div class="usage-tips">
+                        <strong><i class="fa-solid fa-lightbulb" style="color: #ffcc00;"></i> Tip:</strong> Clean the internal brew group weekly for the best tasting coffee.
+                    </div>
+                    <div class="card-action">
+                        <span class="price">$550.00</span>
+                        <button class="btn-instant-cart" data-name="Super-Auto Machine" data-price="550.00">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <img src="image/Equipment5.jpg" alt="Drip Coffee Maker" class="card-image">
+                <div class="card-content">
+                    <h3>Premium Drip Maker</h3>
+                    <p class="description">Programmable drip machine with a thermal carafe that keeps your morning brew hot and fresh for hours without burning.</p>
+                    <div class="usage-tips">
+                        <strong><i class="fa-solid fa-lightbulb" style="color: #ffcc00;"></i> Tip:</strong> Use filtered water to prevent mineral scale buildup and improve taste.
+                    </div>
+                    <div class="card-action">
+                        <span class="price">$85.00</span>
+                        <button class="btn-instant-cart" data-name="Premium Drip Maker" data-price="85.00">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <img src="image/Equipment6.jpg" alt="Classic French Press" class="card-image">
+                <div class="card-content">
+                    <h3>Classic French Press</h3>
+                    <p class="description">Elegant glass and stainless steel press. Yields a rich, full-bodied coffee by retaining natural oils and flavors.</p>
+                    <div class="usage-tips">
+                        <strong><i class="fa-solid fa-lightbulb" style="color: #ffcc00;"></i> Tip:</strong> Steep coarse grounds in hot water for exactly 4 minutes before pressing.
+                    </div>
+                    <div class="card-action">
+                        <span class="price">$35.00</span>
+                        <button class="btn-instant-cart" data-name="Classic French Press" data-price="35.00">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <img src="image/Equipment7.jpg" alt="Gooseneck Kettle" class="card-image">
+                <div class="card-content">
+                    <h3>Gooseneck Kettle</h3>
+                    <p class="description">Temperature-controlled pouring kettle designed for ultimate precision. Essential for perfect pour-over coffee brewing.</p>
+                    <div class="usage-tips">
+                        <strong><i class="fa-solid fa-lightbulb" style="color: #ffcc00;"></i> Tip:</strong> Pour in slow, concentric circles to evenly saturate the coffee bed.
+                    </div>
+                    <div class="card-action">
+                        <span class="price">$65.00</span>
+                        <button class="btn-instant-cart" data-name="Gooseneck Kettle" data-price="65.00">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <img src="image/Equipment8.jpg" alt="Cold Brew Maker" class="card-image">
+                <div class="card-content">
+                    <h3>Cold Brew Maker</h3>
+                    <p class="description">Large capacity glass pitcher with a fine-mesh stainless steel filter, perfect for making smooth, low-acid cold brew.</p>
+                    <div class="usage-tips">
+                        <strong><i class="fa-solid fa-lightbulb" style="color: #ffcc00;"></i> Tip:</strong> Brew in the refrigerator for 12-24 hours for a naturally sweet flavor.
+                    </div>
+                    <div class="card-action">
+                        <span class="price">$45.00</span>
+                        <button class="btn-instant-cart" data-name="Cold Brew Maker" data-price="45.00">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+  
+
+  
+<script src="script.js"></script>
+</body>
+<footer class="footer">
+        <div class="footer-links-container">
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <a href="#">Our Heritage</a>
+                <a href="#">Our Coffee</a>
+                <a href="#">About Bean Boutique</a>
+                <a href="#">Customer Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Careers</h4>
+                <a href="#">Culture and Values</a>
+                <a href="#">Join Our Team</a>
+                <a href="#">Alumni Community</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Social Impact</h4>
+                <a href="#">Ethical Sourcing</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Community Foundation</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Order and Pick Up</h4>
+                <a href="#">Order on the App</a>
+                <a href="#">Order on the Web</a>
+                <a href="#">Delivery Options</a>
+                <a href="#">Explore Coffee for Home</a>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+             <div class="footer-bottom-wrapper">
+            
+        <div class="social-icons">
+        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+
+            <div class="legal-links">
+                <a href="#">Privacy Notice</a>
+                <span class="divider">|</span>
+                <a href="#">Terms of Use</a>
+                <span class="divider">|</span>
+                <a href="#"> Information</a>
+            </div>
+
+            <p class="copyright-text">© 2026 Bean Boutique Coffee Company. All rights reserved.</p>
+        </div>
+    </footer>
+</html>

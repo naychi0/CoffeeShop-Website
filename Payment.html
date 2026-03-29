@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Bean Boutique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Coffeestyle.css">
+    <style>
+        .checkout-page { padding: 60px 5%; background-color: #f9f9f9; min-height: 80vh; }
+        .checkout-container { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        
+        .checkout-box { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .checkout-box h2 { font-size: 1.5rem; color: #1e3932; margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        
+        /* Order Summary Table */
+        .order-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .order-table th, .order-table td { padding: 12px 0; border-bottom: 1px solid #eee; text-align: left; }
+        .order-table th { color: #888; font-weight: 500; font-size: 0.9rem; }
+        .order-table td { color: #1a1a1a; font-weight: 500; }
+        .order-total { font-size: 1.3rem; font-weight: 700; color: #1e3932; text-align: right; margin-top: 20px; }
+
+        /* Forms */
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-size: 0.85rem; color: #555; margin-bottom: 5px; }
+        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-family: 'Poppins', sans-serif; }
+        
+        .btn-pay { width: 100%; background: #006241; color: white; border: none; padding: 15px; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; margin-top: 20px; transition: 0.3s; }
+        .btn-pay:hover { background: #004d33; }
+
+        @media (max-width: 768px) {
+            .checkout-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Bean Boutique</div>
+        <nav class="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="Coffee.html">Coffee</a>
+            <a href="Equipment.html">Equipment</a>              
+            <a href="Event.html">Events</a>
+            <a href="Offer.html">Offers</a>
+           <a href="Card.html" id="navCartLink"><i class="fa-solid fa-cart-shopping" onclick="window.location.href='Card.html'"></i> Cart</a>
+            </nav>
+    </header>
+<table>
+    <tbody id="orderSummary"></tbody>
+</table>
+
+    <div class="checkout-page">
+        <div class="checkout-container">
+            
+            <div class="checkout-box">
+                <h2>Order Summary</h2>
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Qty</th>
+                            <th style="text-align:right;">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="checkoutSummaryBody">
+                        </tbody>
+                </table>
+                <div class="order-total">
+                    Total: <span id="checkoutGrandTotal">$0.00</span>
+                </div>
+            </div>
+
+            <div class="checkout-box">
+                <h2>Billing Details</h2>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Shipping Address</label>
+                        <input type="text" required placeholder="123 Coffee Street, Yangon">
+                    </div>
+                    <div class="form-group">
+                        <label>Payment Method</label>
+                        <select required>
+                            <option value="">Select Payment Method</option>
+                            <option value="card">Credit/Debit Card</option>
+                            <option value="kbzpay">KBZPay / KPay</option>
+                            <option value="cod">Cash on Delivery</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-pay">Place Order</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <table>
+    <tbody id="orderSummary"></tbody>
+</table>
+<h3>Total: $<span id="totalAmount">0.00</span></h3>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

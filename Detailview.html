@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Boutique - Coffee Selection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:wght@400;500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Detailview.css">
+     <link rel="stylesheet" href="Homestyle.css">
+    
+</head>
+<body>
+
+    <div class="hero-section">
+        <header class="navbar">
+            <div class="logo">Bean Boutique</div>
+            <nav class="nav-links">
+                <a href="Home.html">Home</a>
+                <a href="Coffee.html">Coffee</a>
+                <a href="Equipment.html">Equipment</a>              
+                <a href="Event.html">Events</a>
+                <a href="Offer.html">Offers</a>
+                 <a href="Card.html" id="navCartLink"><i class="fa-solid fa-cart-shopping" onclick="window.location.href='Card.html'"></i> Cart</a>
+            
+            </nav>
+        </header> 
+
+   
+</head>
+<body class="product-page-body">
+
+          
+        </nav>
+    </header> 
+
+    <header class="product-header-section">
+        <div class="product-header-container">
+            <img src="image/ice1.jpg" alt="Iced Macchiato" class="product-main-img"> <div class="product-title-info">
+                <h1 id="productTitle">Iced Ube Coconut<br>Macchiato</h1>
+                <p class="calories">380 calories <i class="fa-regular fa-circle-info"></i></p>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-details-container">
+        
+        <section class="size-section">
+            <h2 class="section-title">Size options</h2>
+            <hr class="title-underline">
+            <div class="size-selector">
+                <div class="size-option" onclick="selectSize(this, 5.50)">
+                    <div class="cup-icon"><i class="fa-solid fa-mug-hot" style="font-size: 1rem;"></i></div>
+                    <span class="size-name">Tall</span>
+                    <span class="size-oz">12 fl oz</span>
+                </div>
+                <div class="size-option active" onclick="selectSize(this, 6.50)">
+                    <div class="cup-icon"><i class="fa-solid fa-mug-hot" style="font-size: 1.3rem;"></i></div>
+                    <span class="size-name">Grande</span>
+                    <span class="size-oz">16 fl oz</span>
+                </div>
+                <div class="size-option" onclick="selectSize(this, 7.50)">
+                    <div class="cup-icon"><i class="fa-solid fa-mug-hot" style="font-size: 1.6rem;"></i></div>
+                    <span class="size-name">Venti</span>
+                    <span class="size-oz">24 fl oz</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="options-section">
+            <h2 class="section-title">What's included</h2>
+            <hr class="title-underline">
+
+            <div class="option-box">
+                <span class="option-label">Flavors</span>
+                <span class="option-value">Toasted Coconut Syrup</span>
+                <div class="counter">
+                    <i class="fa-solid fa-circle-minus"></i><span class="qty-num">3</span><i class="fa-solid fa-circle-plus"></i>
+                </div>
+            </div>
+
+            <div class="option-box clickable">
+                <span class="option-label">Milk</span>
+                <span class="option-value">2% Milk</span>
+                <i class="fa-solid fa-chevron-down arrow-icon"></i>
+            </div>
+
+            <div class="sticky-action-bar">
+                <button class="btn-add-order" id="addToOrderBtn">Add to Order - $<span id="currentPrice">6.50</span></button>
+            </div>
+        </section>
+    </main>
+
+    <div id="cartOverlay" class="cart-overlay"></div>
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Order</h2>
+            <span class="close-cart" id="closeCartBtn">&times;</span>
+        </div>
+        <div class="cart-items" id="cartItemsContainer">
+            <p style="text-align:center; margin-top: 20px; color: #888;">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div style="display:flex; justify-content:space-between; font-weight:bold; font-size:1.2rem; margin-bottom:15px; color:#1a1a1a;">
+                <span>Total:</span>
+                <span id="cartTotalValue">$0.00</span>
+            </div>
+            <button id="checkoutBtn" style="width:100%; padding:15px; background:#006241; color:white; border:none; border-radius:8px; font-size:1.1rem; cursor:pointer;">Proceed to Checkout</button>
+        </div>
+    </div>
+<footer class="footer">
+        <div class="footer-links-container">
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <a href="#">Our Heritage</a>
+                <a href="#">Our Coffee</a>
+                <a href="#">About Bean Boutique</a>
+                <a href="#">Customer Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Careers</h4>
+                <a href="#">Culture and Values</a>
+                <a href="#">Join Our Team</a>
+                <a href="#">Alumni Community</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Social Impact</h4>
+                <a href="#">Ethical Sourcing</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Community Foundation</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Order and Pick Up</h4>
+                <a href="#">Order on the App</a>
+                <a href="#">Order on the Web</a>
+                <a href="#">Delivery Options</a>
+                <a href="#">Explore Coffee for Home</a>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+           <div class="footer-bottom-wrapper">
+            
+        <div class="social-icons">
+        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+
+            <div class="legal-links">
+                <a href="#">Privacy Notice</a>
+                <span class="divider">|</span>
+                <a href="#">Terms of Use</a>
+                <span class="divider">|</span>
+                <a href="#"> Information</a>
+            </div>
+
+            <p class="copyright-text">© 2026 Bean Boutique Coffee Company. All rights reserved.</p>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
+    
+</body>
+</html>

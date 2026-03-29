@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Bean Boutique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Coffeestyle.css">
+    <link rel="stylesheet" href="Cart.css">
+   
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Bean Boutique</div>
+        <nav class="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="Coffee.html">Coffee</a>
+            <a href="Equipment.html">Equipment</a>              
+            <a href="Event.html">Events</a>
+            <a href="Offer.html">Offers</a>
+            <a href="#" class="active"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+        </nav>
+    </header>
+
+    <div class="cart-page-wrapper">
+        <div class="cart-container">
+            <h1 class="cart-title">Your Shopping Cart</h1>
+
+            <div id="cartContent">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartTableBody">
+                        </tbody>
+                </table>
+
+                <div class="cart-summary" id="cartSummarySection">
+                    <div class="grand-total">
+                        Total Amount: <span id="cartGrandTotal">$0.00</span>
+                    </div>
+                    <div class="cart-actions">
+                        <a href="Coffee.html" class="btn-continue">Continue Shopping</a>
+                        <a href="Payment.html" class="btn-checkout-page">Proceed to Checkout</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Boutique - Events & Workshops</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Event.css"> </head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Bean Boutique</div>
+        <nav class="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="Coffee.html">Coffee</a>
+            <a href="Equipment.html">Equipment</a>            
+            <a href="Event.html" class="active">Events</a> <a href="Offer.html">Offers</a>
+            <a href="Card.html" id="navCartLink"><i class="fa-solid fa-cart-shopping" onclick="window.location.href='Card.html'"></i> Cart</a>
+        </nav>
+    </header> 
+
+    
+
+    <section class="events-hero">
+        <div class="events-hero-content">
+            <h1>Upcoming Events & Workshops</h1>
+            <p>Join our community. Learn the art of brewing, taste unique blends, and enjoy live music.</p>
+        </div>
+    </section>
+
+    
+
+    <section class="how-it-works">
+        <h2>What to expect</h2>
+        <p class="subtitle">Immerse yourself in the world of coffee.</p>
+        
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">🎓</div>
+                <h3>Learn from Experts</h3>
+                <p>Our master roasters and champion baristas share their secrets in hands-on classes.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">☕</div>
+                <h3>Taste Rare Blends</h3>
+                <p>Experience exclusive, limited-time single-origin coffees before anyone else.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🤝</div>
+                <h3>Meet the Community</h3>
+                <p>Connect with fellow coffee lovers during our relaxed evening social events.</p>
+            </div>
+        </div>
+    </section>
+
+    
+  
+
+
+    <section class="events-schedule">
+        <h2>Schedule your routine</h2>
+        <p class="subtitle">Find an event that fits your taste.</p>
+
+        <div class="events-grid">
+            
+            <div class="event-card green-card">
+                <div class="event-date">This Friday, 7:00 PM</div>
+                <h3>Latte Art Masterclass</h3>
+                <p class="event-desc">Perfect your pour. Learn the techniques behind the heart, rosetta, and tulip designs.</p>
+                
+                <ul class="event-details">
+                    <li>📍 Main Workshop Area</li>
+                    <li>⏱️ 2 Hours</li>
+                    <li>👤 Max 10 People</li>
+                </ul>
+                
+                <button class="btn-register" onclick="openRegistration('Latte Art Masterclass')">Register Now ($25)</button>
+            </div>
+
+            <div class="event-card gold-card">
+                <div class="event-date">Saturday, 10:00 AM</div>
+                <h3>Single Origin Cupping</h3>
+                <p class="event-desc">A guided tasting session featuring our newest Ethiopian and Colombian beans.</p>
+                
+                <ul class="event-details">
+                    <li>📍 Tasting Room</li>
+                    <li>⏱️ 1.5 Hours</li>
+                    <li>👤 Free for Gold Members</li>
+                </ul>
+                
+                <button class="btn-register" onclick="openRegistration('Single Origin Cupping')">Register Now (Free)</button>
+            </div>
+
+            <div class="event-card black-card">
+                <div class="event-date">Next Thursday, 8:00 PM</div>
+                <h3>Live Acoustic Night</h3>
+                <p class="event-desc">Relax with a cup of your favorite blend and enjoy live music from local artists.</p>
+                
+                <ul class="event-details">
+                    <li>📍 The Lounge</li>
+                    <li>⏱️ 3 Hours</li>
+                    <li>👤 Open to everyone</li>
+                </ul>
+                
+                <button class="btn-register" onclick="openRegistration('Live Acoustic Night')">Reserve a Seat</button>
+            </div>
+
+        </div>
+    </section>
+     
+
+
+
+
+
+    <div id="registrationModal" class="modal-overlay">
+        <div class="modal-box">
+            <span class="close-btn" onclick="closeRegistration()">&times;</span>
+            <div class="modal-text">
+                <h2>Event Registration</h2>
+                <p>You are registering for: <br><strong id="eventNameDisplay" style="color: var(--primary-brown);"></strong></p>
+                
+                <form id="eventForm" class="registration-form">
+                    <div class="input-group">
+                        <input type="text" id="regFirstName" placeholder="First Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="regLastName" placeholder="Last Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="regEmail" placeholder="Email Address" required>
+                    </div>
+                    <button type="submit" class="btn-submit-reg">Complete Registration</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+   <script src="script.js"></script>
+</body> 
+
+<footer class="footer">
+        <div class="footer-links-container">
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <a href="#">Our Heritage</a>
+                <a href="#">Our Coffee</a>
+                <a href="#">About Bean Boutique</a>
+                <a href="#">Customer Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Careers</h4>
+                <a href="#">Culture and Values</a>
+                <a href="#">Join Our Team</a>
+                <a href="#">Alumni Community</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Social Impact</h4>
+                <a href="#">Ethical Sourcing</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Community Foundation</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Order and Pick Up</h4>
+                <a href="#">Order on the App</a>
+                <a href="#">Order on the Web</a>
+                <a href="#">Delivery Options</a>
+                <a href="#">Explore Coffee for Home</a>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+              <div class="footer-bottom-wrapper">
+            
+              <div class="social-icons">
+              <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+           </div>
+
+            <div class="legal-links">
+                <a href="#">Privacy Notice</a>
+                <span class="divider">|</span>
+                <a href="#">Terms of Use</a>
+                <span class="divider">|</span>
+                <a href="#"> Information</a>
+            </div>
+
+            <p class="copyright-text">© 2026 Bean Boutique Coffee Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+</html>

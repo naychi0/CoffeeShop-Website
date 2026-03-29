@@ -1,0 +1,734 @@
+/* ==========================================================
+   VARIABLES & RESET
+   ========================================================== */
+:root {
+    --primary-brown: #5c3516; /* Dark brown for headings and prices */
+    --text-grey: #888888; /* Grey for subtitles and descriptions */
+    --card-bg: #fcf6eb; /* Light beige for the card text area */
+    --bg-color: #ffffff;
+    --color-primary: #C5A880; /* Warm golden/caramel accent */
+    --color-primary-hover: #b0926a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: var(--bg-color);
+    color: var(--text-grey);
+    overflow-x: hidden;
+    animation: fadeInPage 0.5s ease-out forwards;
+}
+
+/* ==========================================================
+   PAGE TRANSITION ANIMATIONS
+   ========================================================== */
+@keyframes fadeInPage {
+    from { 
+        opacity: 0; 
+        transform: translateY(15px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+body.fade-out {
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+/* ==========================================================
+   NAVIGATION BAR
+   ========================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+    background-color: #fff;
+    box-shadow: none;
+}
+
+.logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    color: var(--color-primary);
+}
+
+/* ==========================================================
+   MENU SECTION (HERO)
+   ========================================================== */
+.menu-section {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    overflow: hidden;
+}
+
+.splash-graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    opacity: 0.8;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: var(--primary-brown);
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.menu-header p {
+    font-size: 1.1rem;
+    color: var(--text-grey);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ==========================================================
+   COFFEE CARDS (GRID)
+   ========================================================== */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.coffee-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.coffee-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    background-color: var(--card-bg);
+    text-align: center;
+    padding: 25px 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--primary-brown);
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-grey);
+    margin-bottom: 12px;
+}
+
+.card-content .price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--primary-brown);
+    font-weight: 700;
+}
+
+.btn-add-cart {
+    background-color: var(--color-primary); 
+    color: #1a1a1a;
+    border: none;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-add-cart:hover {
+    background-color: var(--color-primary-hover);
+    color: #fff;
+}
+
+
+
+/* ==========================================================
+   MEGA FOOTER STYLES
+   ========================================================== */
+.footer {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    padding: 60px 8% 30px 8%;
+    border-top: 1px solid #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    margin-top: 50px;
+}
+
+.footer-links-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    flex: 1; /* Helps columns space evenly */
+}
+
+.footer-column h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #555555;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.footer-column a:hover {
+    color: #5c3516; 
+    text-decoration: underline;
+}
+
+.footer-divider {
+    border: none;
+    border-top: 2px solid #f1f0f0;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+.footer-bottom-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 1.1rem; 
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    background-color: #5c3516;
+}
+
+.legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.legal-links a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.legal-links a:hover {
+    text-decoration: underline;
+}
+
+.legal-links .divider {
+    color: #ccc;
+}
+
+.copyright-text {
+    color: #888888;
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+/* ==========================================================
+   MOBILE RESPONSIVE ADJUSTMENTS (ALL SECTIONS)
+   ========================================================== */
+@media (max-width: 992px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-header h2 {
+        font-size: 2rem;
+    }
+    
+    .cart-sidebar { 
+        width: 100%; 
+        right: -100%; 
+    }
+    
+    .footer-links-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-column {
+        min-width: 100%; /* Stacks the columns on mobile */
+    }
+    
+    .legal-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .legal-links .divider {
+        display: none; 
+    }
+}
+
+/* ==========================================================
+   COFFEE MENU POPUP (MODAL) STYLES
+   ========================================================== */
+.menu-modal-overlay {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(5px); 
+    display: none; /* 💡 ဒီစာကြောင်းက မူလအခြေအနေမှာ ဖျောက်ထားပေးမှာပါ */
+    justify-content: center;
+    align-items: center;
+    z-index: 2500; /* အပေါ်ဆုံးက ပေါ်အောင် */
+}
+
+/* JS ကနေ 'show' class ထည့်ရင် ပေါ်လာမယ် */
+.menu-modal-overlay.show {
+    display: flex;
+}
+
+.menu-modal-box {
+    background-color: #ffffff;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 600px; /* Popup အကျယ် */
+    max-height: 80vh; /* ဖုန်းမှာ အောက်ခြေ မပြတ်အောင် */
+    overflow-y: auto; /* စာများရင် Scroll ရအောင် */
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    animation: menuPopIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes menuPopIn {
+    from { opacity: 0; transform: scale(0.95) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.menu-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky; /* အပေါ်မှာ ကပ်နေအောင် */
+    top: 0;
+    background-color: #fff;
+    z-index: 10;
+    border-radius: 16px 16px 0 0;
+}
+
+.menu-modal-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #1a1a1a;
+}
+
+.close-menu-btn {
+    font-size: 2.2rem;
+    color: #888;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s;
+}
+
+.close-menu-btn:hover { color: #1a1a1a; }
+
+.menu-modal-content {
+    padding: 30px;
+}
+
+.menu-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* (၂) တန်းခွဲပြမယ် */
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.menu-column h4 {
+    font-family: 'Poppins', sans-serif;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f1f0f0;
+    padding-bottom: 8px;
+}
+
+.menu-column a {
+    display: block;
+    color: #555555;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    padding: 8px 0;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.menu-column a:hover {
+    color: var(--color-primary); /* ရွှေအိုရောင် */
+    transform: translateX(5px); /* Hover လုပ်ရင် ရှေ့တိုးမယ် */
+}
+
+.btn-view-all-modal {
+    display: block;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: #ffffff !important;
+    padding: 15px;
+    border-radius: 30px; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-view-all-modal:hover {
+    background-color: var(--color-primary);
+    color: #1a1a1a !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 500px) {
+    .menu-grid-container {
+        grid-template-columns: 1fr; /* ဖုန်းမှာ တစ်တန်းတည်း */
+        gap: 20px;
+    }
+    .menu-modal-box { border-radius: 0; height: 100vh; max-height: 100vh; width: 100%; }
+    .menu-modal-header { border-radius: 0; }
+}
+
+/* Container ကို Relative ပေးထားမှ အတွင်းက Popup က ကပ်နေမှာပါ */
+.coffee-dropdown-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Tasting Notes & Usage Tips Styling */
+.tasting-notes, .brewing-method, .usage-tips {
+    text-align: left;
+    font-size: 0.85rem;
+    background: #fdfaf5;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+    line-height: 1.4;
+    color: #444;
+}
+
+.tasting-notes em {
+    color: var(--color-primary-hover);
+    font-weight: 500;
+}
+
+.card-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--primary-brown);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 5;
+}
+
+.usage-tips i {
+    color: #ffcc00; /* မီးသီး icon အရောင် */
+}
+
+/* ==========================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================== */
+
+/* --- ၁။ Desktop အသေးစားနှင့် Tablet အကြီးများ (1024px အောက်) --- */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 20px 5%;
+    }
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr); /* ကတ် (၃) ခုစီ ပြပါမယ် */
+    }
+}
+
+/* --- ၂။ Tablet အလတ်စားများ (768px အောက်) --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Logo နဲ့ Menu ကို အပေါ်အောက် စီလိုက်မယ် */
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap; /* စာသားတွေ များရင် အောက်တန်းဆင်းသွားမယ် */
+        justify-content: center;
+    }
+
+    .menu-header h2 {
+        font-size: 2rem; /* ခေါင်းစဉ်ကို နည်းနည်း သေးလိုက်မယ် */
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr); /* ကတ် (၂) ခုစီ ပြပါမယ် */
+        gap: 15px;
+    }
+
+    .splash-graphic {
+        width: 150px; /* Splash ပုံကို သေးလိုက်မယ် */
+    }
+
+    /* Mini-Popup ကို ဖုန်းမှာ နေရာ ပြန်ညှိခြင်း */
+    .mini-popup {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%); /* အလယ်တည့်တည့်မှာ ပေါ်စေရန် */
+        width: 90vw; /* မျက်နှာပြင်ရဲ့ ၉၀ ရာခိုင်နှုန်းအထိ ယူမယ် */
+    }
+}
+
+/* --- ၃။ Mobile ဖုန်းအသေးများ (480px အောက်) --- */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 2.2rem;
+    }
+
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Menu တွေကို ၃ ခုစီ ၂ တန်းစီမယ် */
+        text-align: center;
+        gap: 10px;
+    }
+
+    .menu-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr; /* ကတ် (၁) ခုတည်းပဲ ပြပါမယ် */
+    }
+
+    .coffee-card {
+        max-width: 320px;
+        margin: 0 auto; /* ကတ်ကို အလယ်ပို့မယ် */
+    }
+
+    .footer-links-container {
+        flex-direction: column; /* Footer links တွေကို အပေါ်အောက် စီမယ် */
+        text-align: center;
+    }
+
+    .footer-bottom-wrapper {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* ==========================================================
+   ENHANCED COFFEE CARD STYLING
+   ========================================================== */
+.coffee-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* ခလုတ်များကို အောက်ခြေသို့ ပို့ရန် */
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.coffee-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* အလယ်စာသားများကို နေရာယူစေရန် */
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.ingredients {
+    font-size: 0.8rem;
+    color: #006241;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.description {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1; /* စာပိုဒ်တိုရှည်မတူရင်တောင် အောက်ခြေကို ညှိပေးသည် */
+}
+
+/* ဈေးနှုန်းနှင့် ခလုတ်ကို ဘေးတိုက်ထားခြင်း */
+.card-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.card-action .price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+/* Customize ခလုတ်နှင့် Instant Cart ခလုတ် Design */
+.btn-instant-cart, .btn-add-cart {
+    background-color: #e5b95c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.btn-instant-cart:hover, .btn-add-cart:hover {
+    background-color:  #e5b95c;
+}
+
+.usage-tips {
+    background: #fdfaf5;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0 15px 0;
+    font-size: 0.85rem;
+    color: #444;
+    line-height: 1.4;
+    border-left: 3px solid #eee763; /* ဘယ်ဘက်မှာ အစိမ်းရောင်မျဉ်းလေး ပါစေရန် */
+}

@@ -1,0 +1,343 @@
+/* --- NAVIGATION BAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+    background-color: #fff;
+    
+}
+
+.logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+            color: #d4a373;
+            
+        }
+
+
+/* ==========================================================
+   DELIVERY / PICKUP SECTION STYLES
+   ========================================================== */
+
+.delivery-section {
+    display: flex;
+    min-height: 600px;
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    border-top: 1px solid #eee;
+    overflow: hidden; /* Important to contain the curved background */
+}
+
+/* --- Left Side (Content) --- */
+.delivery-content {
+    flex: 1;
+    padding: 60px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Toggle Buttons */
+.order-toggle {
+    display: flex;
+    background-color: #ffffff;
+    border: 1px solid #1e3932; /* Starbucks Green */
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+.toggle-btn {
+    padding: 10px 40px;
+    border: none;
+    background-color: transparent;
+    color: #1e3932;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+    background-color: #1e3932;
+    color: #ffffff;
+    border-radius: 30px;
+}
+
+/* Text Area */
+.delivery-text-area {
+    max-width: 500px;
+}
+
+.delivery-text-area h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.delivery-text-area p {
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.delivery-link {
+    color: #1e3932;
+    text-decoration: underline;
+}
+
+.delivery-link:hover {
+    text-decoration: none;
+}
+
+/* Get Started Button */
+.btn-get-started {
+    background-color: #1e3932;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-get-started:hover {
+    background-color: #142a24;
+    transform: scale(1.02);
+}
+
+.icon-external {
+    font-size: 1.2rem;
+}
+
+/* Fine Print */
+.delivery-fine-print {
+    font-size: 0.8rem !important;
+    color: #666666 !important;
+    line-height: 1.5 !important;
+}
+
+/* --- Right Side (Image Area with Curved Background) --- */
+.delivery-image-area {
+    flex: 1;
+    position: relative;
+    background: linear-gradient(to bottom, #1e3932 0%, #3e8863 50%, #f7f7f7 50%, #f7f7f7 100%);
+    /* The curved effect is created by a large border-radius on a pseudo-element */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delivery-image-area::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    width: 120%;
+    height: 100%;
+    background-color: #f7f7f7;
+    border-radius: 50% 50% 0 0; /* Creates the curve */
+    z-index: 1;
+}
+
+.delivery-img {
+    position: relative;
+    z-index: 2;
+    max-width: 80%;
+    height: auto;
+    /* Optional: Add a drop shadow to the image to make it pop like the original */
+    filter: drop-shadow(0 20px 20px rgba(0,0,0,0.2));
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .delivery-section {
+        flex-direction: column;
+    }
+    .delivery-content {
+        padding: 40px 5%;
+        align-items: center;
+        text-align: center;
+    }
+    .delivery-text-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .delivery-image-area {
+        min-height: 400px;
+    }
+}
+
+/* ==========================================================
+   MEGA FOOTER STYLES
+   ========================================================== */
+.footer {
+    background-color: #ffffff; /* Clean white background */
+    color: #1a1a1a;
+    padding: 60px 8% 30px 8%;
+    border-top: 1px solid #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    margin-top: 50px;
+}
+
+/* Footer Columns Layout */
+.footer-links-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+}
+
+.footer-column h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #555555;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #5c3516; /* Dark brown hover */
+    text-decoration: underline;
+}
+
+/* Divider Line */
+.footer-divider {
+    border: none;
+    border-top: 2px solid #f1f0f0;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+/* Bottom Section (Socials & Legal) */
+.footer-bottom-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50%;
+     font-size: 1.1rem; 
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    background-color: #5c3516;
+}
+
+.legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.legal-links a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.legal-links a:hover {
+    text-decoration: underline;
+}
+
+.legal-links .divider {
+    color: #ccc;
+}
+
+.copyright-text {
+    color: #888888;
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-links-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .legal-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .legal-links .divider {
+        display: none; /* Hide the "|" dividers on mobile */
+    }
+}
+
